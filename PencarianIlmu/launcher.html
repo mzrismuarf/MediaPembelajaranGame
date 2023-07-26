@@ -1,0 +1,135 @@
+﻿<html lang="en-US">
+	<head>
+		<!-- Created using Storyline 3 - http://www.articulate.com  --> 
+		<!-- version: 3.12.24693.0 --> 
+
+		<title>PencarianIlmu</title>
+    <style>
+      @font-face {
+        font-family: "Open Sans Full";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Open Sans"),
+             local("OpenSans"),
+             url(html5/lib/stylesheets/mobile-fonts/open-sans-regular.woff) format("woff")
+      }
+      body {
+        background-color: #F7F7F7;
+      }
+      h1 {
+        color: #636363;
+        font-family: "Open Sans Full", Helvetica, sans-serif;
+        font-size: 150%;
+        margin-bottom: 92px;
+        padding-bottom: 0;
+      }
+
+      button {
+        background-color: #FFF;
+        border: 1px solid #636363;
+        border-radius: 80px;
+        box-shadow: 2px 3px 4px 1px rgba(39, 39, 39, 0.33);
+        color: #636363;
+        font-family: "Open Sans Full", Helvetica, sans-serif;
+        font-size: 100%;
+        padding: 20px 50px;
+      }
+      img {
+        height: 15px;
+        width: 15px;
+        margin-left: 8px;
+      }
+    </style>
+		<script>
+			
+			/******************************************************************************/
+			//
+			// NOTE TO DEVELOPERS:
+			// The following code should be integrated with your web page in order to open
+			// the presentation in a new window.  To launch the presentation immediately, 
+			// simply copy the code below into your web page.  To launch the presentation
+			// when a button or link is clicked, call LaunchPresentation when the onClick
+			// event is triggered.
+			//
+			/******************************************************************************/		
+		
+		
+			var Safari =  (navigator.appVersion.indexOf("Safari") >= 0);
+			
+			var g_bChromeless = false;
+			var g_bResizeable = false;
+			var g_nContentWidth = 740;
+			var g_nContentHeight = 425;
+			var g_strStartPage = "story.html" + document.location.search;
+			var g_strBrowserSize = "optimal";
+		
+			function LaunchContent()
+			{
+				var nWidth = screen.availWidth;
+				var nHeight = screen.availHeight;
+
+				if (nWidth > g_nContentWidth && nHeight > g_nContentHeight && g_strBrowserSize != "fullscreen")
+				{
+					nWidth = g_nContentWidth;
+					nHeight = g_nContentHeight;
+					
+					if (!Safari && !g_bChromeless)
+					{
+						nWidth += 17;
+					}
+				}
+
+				// Build the options string
+				var strOptions = "width=" + nWidth +",height=" + nHeight;
+				if (g_bResizeable)
+				{
+					strOptions += ",resizable=yes"
+				}
+				else
+				{
+					strOptions += ",resizable=no"
+				}
+
+				if (g_bChromeless)
+				{
+					strOptions += ", status=0, toolbar=0, location=0, menubar=0, scrollbars=0";
+				}
+				else
+				{
+					strOptions += ", status=1, toolbar=1, location=1, menubar=1, scrollbars=1";
+				}
+
+				// Launch the URL
+				if (Safari)
+				{
+					var oWnd = window.open("", "_blank", strOptions);
+					oWnd.location = g_strStartPage;
+				}
+				else
+				{
+					window.open(g_strStartPage , "_blank", strOptions);
+				}
+			}
+
+			
+			
+		</script>
+		
+	</head>
+	
+	<body onload="setTimeout('LaunchContent()', 100);">
+		<center>
+			<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+						<center>
+              <h1 tabIndex="-1">PencarianIlmu</h1>
+							<button onclick="LaunchContent()" aria-label="Launch course: opens in new window">Launch course <img src="story_content/external_window.png" style="border-style: none; height: 14px; width: 14px;" tabIndex="-1" aria-hidden="true"/></button>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
+
